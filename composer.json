@@ -1,0 +1,27 @@
+{
+  "name": "aleplusplus/soapclient-curl-php",
+  "description": "Soap Client using Curl",
+  "keywords": ["soap", "curl", "non-wsdl", "client", "sri"],
+  "type": "library",
+  "require": {
+    "php": ">=5.4.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alejandro Labrada Diaz",
+      "email": "aleplusplus@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {
+      "SoapClientCurl": "src"
+    }
+  },
+  "support": {
+    "email": "aleplusplus@gmail.com"
+  }
+}
