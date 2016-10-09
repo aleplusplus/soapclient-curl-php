@@ -20,9 +20,9 @@ Via composer:
 $ composer require aleplusplus/soapclient-curl-php
 ```
 
-## Usage:
+## Example:
 
-Using the `SoapClientCurl\SoapClientRequest`: in Server SOAP of SRI.
+Using the `SoapClientCurl\SoapClientRequest` in SOAP Server of SRI:
 
 ```php
 use SoapClientCurl\SoapClientRequest;
@@ -31,18 +31,13 @@ use SoapClientCurl\SoapClientRequest;
 $claveAccesoComprobante = '<CLAVE_ACCESO>';
 
 // Url Soap Server Example
-$url = 'https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes';
+$url = '<SOAP_SERVER_URL>';
 
-$body = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ec="http://ec.gob.sri.ws.autorizacion">
-            <soapenv:Header/>
-            <soapenv:Body>
-                <ec:autorizacionComprobante>
-                        <claveAccesoComprobante>'.$claveAccesoComprobante.'</claveAccesoComprobante>
-                </ec:autorizacionComprobante>
-            </soapenv:Body>
-        </soapenv:Envelope>';
+$body = '<SOAP_SCHEMA>';
 
 $headers = array('Content-Type: text/xml; charset=utf-8', 'Content-Length: '.strlen($body));
 
 $result = SoapClientRequest::send($url, $headers, $body);
 ```
+
+For more deteal see test(https://github.com/aleplusplus/soapclient-curl-php/blob/master/tests/SoapClientRequestTest.php) 
