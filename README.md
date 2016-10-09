@@ -22,12 +22,12 @@ $ composer require aleplusplus/soapclient-curl-php
 
 ## Usage:
 
-Using the `SoapClientCurl\SoapClientRequest`:
+Using the `SoapClientCurl\SoapClientRequest`: in Server SOAP of SRI.
 
 ```php
 use SoapClientCurl\SoapClientRequest;
 
-// Example
+// Clave Acceso
 $claveAccesoComprobante = '<CLAVE_ACCESO>';
 
 // Url Soap Server Example
