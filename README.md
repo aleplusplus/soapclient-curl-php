@@ -25,22 +25,24 @@ $ composer require aleplusplus/soapclient-curl-php
 Using the `SoapClientCurl\SoapClientRequest`:
 
 ```php
-    use SoapClientCurl\SoapClientRequest;
+use SoapClientCurl\SoapClientRequest;
 
-    $claveAccesoComprobante = '1302201501179188978900110010010000100520001005215';
+// Example
+$claveAccesoComprobante = '<CLAVE_ACCESO>';
 
-    $url = 'https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes';
-    
-    $body = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ec="http://ec.gob.sri.ws.autorizacion">
-                <soapenv:Header/>
-                <soapenv:Body>
-                    <ec:autorizacionComprobante>
-                            <claveAccesoComprobante>'.$claveAccesoComprobante.'</claveAccesoComprobante>
-                    </ec:autorizacionComprobante>
-                </soapenv:Body>
-            </soapenv:Envelope>';
+// Url Soap Server Example
+$url = 'https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes';
 
-    $headers = array('Content-Type: text/xml; charset=utf-8', 'Content-Length: '.strlen($body));
-    
-    $result = SoapClientRequest::send($url, $headers, $body);
+$body = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ec="http://ec.gob.sri.ws.autorizacion">
+            <soapenv:Header/>
+            <soapenv:Body>
+                <ec:autorizacionComprobante>
+                        <claveAccesoComprobante>'.$claveAccesoComprobante.'</claveAccesoComprobante>
+                </ec:autorizacionComprobante>
+            </soapenv:Body>
+        </soapenv:Envelope>';
+
+$headers = array('Content-Type: text/xml; charset=utf-8', 'Content-Length: '.strlen($body));
+
+$result = SoapClientRequest::send($url, $headers, $body);
 ```
