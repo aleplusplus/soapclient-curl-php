@@ -40,4 +40,4 @@ $headers = array('Content-Type: text/xml; charset=utf-8', 'Content-Length: '.str
 $result = SoapClientRequest::send($url, $headers, $body);
 ```
 
-For more deteal see test(https://github.com/aleplusplus/soapclient-curl-php/blob/master/tests/SoapClientRequestTest.php) 
+For more detail see [test](https://github.com/aleplusplus/soapclient-curl-php/blob/master/tests/SoapClientRequestTest.php).
