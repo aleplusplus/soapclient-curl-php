@@ -2,6 +2,8 @@
 
 namespace SoapClientCurl;
 
+use SoapClientCurl\SoapClientResponse;
+
 class SoapClientRequest {
 
     private static $handle = null;
