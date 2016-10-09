@@ -9,5 +9,5 @@
 [packagist-version]: https://img.shields.io/packagist/v/aleplusplus/soapclient-curl-php.svg?style=flat
 [packagist-downloads]: https://img.shields.io/packagist/dm/aleplusplus/soapclient-curl-php.svg?style=flat
 
-[travis-status]: https://travis-ci.org/aleplusplus/soapclient-curl-php.svg?branch=maste
+[travis-status]: https://travis-ci.org/aleplusplus/soapclient-curl-php.svg?branch=master
 [travis-url]: https://travis-ci.org/aleplusplus/soapclient-curl-php
