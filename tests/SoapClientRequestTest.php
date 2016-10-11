@@ -1,12 +1,12 @@
 <?php
 
 use SoapClientCurl\SoapClientRequest;
- 
-class SoapClientRequestTest extends PHPUnit_Framework_TestCase {
- 
-  public function testResponseSRI()
-  {
-    // Clave de Acceso para una factura de Esdinamico en Pruebas
+
+class SoapClientRequestTest extends PHPUnit_Framework_TestCase
+{
+    public function testResponseSRI()
+    {
+        // Clave de Acceso para una factura de Esdinamico en Pruebas
     $claveAccesoComprobante = '1302201501179188978900110010010000100520001005215';
     // Ambiente de prueba de SRI
     $url = 'https://celcer.sri.gob.ec/comprobantes-electronicos-ws/AutorizacionComprobantes';
@@ -21,9 +21,9 @@ class SoapClientRequestTest extends PHPUnit_Framework_TestCase {
                 </soapenv:Body>
                 </soapenv:Envelope>';
         // Cabacera de la peticion
-        $headers = array('Content-Type: text/xml; charset=utf-8', 'Content-Length: '.strlen($body));
-    
-    $result = SoapClientRequest::send($url, $headers, $body);
-    $this->assertTrue(true);
-  }
+        $headers = ['Content-Type: text/xml; charset=utf-8', 'Content-Length: '.strlen($body)];
+
+        $result = SoapClientRequest::send($url, $headers, $body);
+        $this->assertTrue(true);
+    }
 }
