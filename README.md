@@ -26,9 +26,6 @@ Using the `SoapClientCurl\SoapClientRequest` in SOAP Server of SRI:
 ```php
 use SoapClientCurl\SoapClientRequest;
 
-// Clave Acceso
-$claveAccesoComprobante = '<CLAVE_ACCESO>';
-
 // Url Soap Server Example
 $url = '<SOAP_SERVER_URL>';
 
