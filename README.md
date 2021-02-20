@@ -34,6 +34,8 @@ $body = '<SOAP_SCHEMA>';
 $headers = array('Content-Type: text/xml; charset=utf-8', 'Content-Length: '.strlen($body));
 
 $result = SoapClientRequest::send($url, $headers, $body);
+
+print_r($result);
 ```
 
 For more detail see [test](https://github.com/aleplusplus/soapclient-curl-php/blob/master/tests/SoapClientRequestTest.php).
